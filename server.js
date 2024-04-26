@@ -8,7 +8,9 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 });
 
-
+app.get('/customers', (req, res) => {
+    res.render('objects/customers.ejs')
+});
 
 const port = 8080;
 app.listen(port, () => {
