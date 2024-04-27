@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Drone Store</th>
+        <th>Drone Tag</th>
+        <th>Drone Pilot</th>
+        <th>Weight Allowed</th>
+        <th>Current Weight</th>
+        <th>Deliveries Allowed</th>
+        <th>Delivies in Progress</th>
+        <% droneTrafficControl.forEach(drone => {%>
+            <tr>
+                <td><%= drone.drone_serves_store %></td>
+                <td><%= drone.drone_tag %></td>
+                <td><%= drone.pilot %></td>
+                <td><%= drone.total_weight_allowed %></td>
+                <td><%= drone.current_weight %></td>
+                <td><%= drone.deliveries_allowed %></td>
+                <td><%= drone.deliveries_in_progress %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <div class="row">
+        <a href="/views" class="long button">Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Pilot Username</th>
+        <th>License ID</th>
+        <th>Drone Store</th>
+        <th>Drone Tag</th>
+        <th>Successful Deliveries</th>
+        <th>Pending Deliveries</th>
+        <% dronePilotRoster.forEach(pilot => {%>
+            <tr>
+                <td><%= pilot.pilot %></td>
+                <td><%= pilot.licenseID %></td>
+                <td><%= pilot.drone_serves_store %></td>
+                <td><%= pilot.drone_tag %></td>
+                <td><%= pilot.successful_deliveries %></td>
+                <td><%= pilot.pending_deliveries %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <div class="row">
+        <a href="/views" class="long button">Back</a>
+    </div>
+</body>
+</html>

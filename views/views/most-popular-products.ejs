@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Product Barcode</th>
+        <th>Product Name</th>
+        <th>Product Weight</th>
+        <th>Lowest Price</th>
+        <th>Highest Price</th>
+        <th>Lowest Quantity</th>
+        <th>Highest Quantity</th>
+        <th>Total Quantity</th>
+        <% mostPopularProducts.forEach(product => {%>
+            <tr>
+                <td><%= product.barcode %></td>
+                <td><%= product.product_name %></td>
+                <td><%= product.weight %></td>
+                <td><%= product.lowest_price %></td>
+                <td><%= product.highest_price %></td>
+                <td><%= product.lowest_quantity %></td>
+                <td><%= product.highest_quantity %></td>
+                <td><%= product.total_quantity %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <div class="row">
+        <a href="/views" class="long button">Back</a>
+    </div>
+</body>
+</html>

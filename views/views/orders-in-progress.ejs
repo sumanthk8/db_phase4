@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Order ID</th>
+        <th>Order Cost</th>
+        <th>Product Count</th>
+        <th>Payload</th>
+        <th>Contents</th>
+        <% ordersInProgress.forEach(order => {%>
+            <tr>
+                <td><%= order.orderID %></td>
+                <td><%= order.cost %></td>
+                <td><%= order.num_products %></td>
+                <td><%= order.payload %></td>
+                <td><%= order.contents %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <div class="row">
+        <a href="/views" class="long button">Back</a>
+    </div>
+</body>
+</html>

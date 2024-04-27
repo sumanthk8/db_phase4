@@ -1,5 +1,13 @@
 import express from 'express';
-import { roleDistribution } from './database.js';
+import { 
+    customerCreditCheck, 
+    dronePilotRoster, 
+    droneTrafficControl, 
+    mostPopularProducts, 
+    ordersInProgress, 
+    roleDistribution, 
+    storeSalesOverview
+} from './database.js';
 
 const app = express();
 
@@ -36,9 +44,50 @@ app.get('/views', (req, res) => {
 
 app.get('/views/role-distribution', async (req, res) => {
     const rows = await roleDistribution();
-    // console.log(rows[0].category);
     res.render('views/role-distribution.ejs', {
         roleDistribution: rows
+    })
+});
+
+app.get('/views/customer-credit-check', async (req, res) => {
+    const rows = await customerCreditCheck();
+    res.render('views/customer-credit-check.ejs', {
+        customerCreditCheck: rows
+    })
+});
+
+app.get('/views/drone-traffic-control', async (req, res) => {
+    const rows = await droneTrafficControl();
+    res.render('views/drone-traffic-control.ejs', {
+        droneTrafficControl: rows
+    })
+});
+
+app.get('/views/most-popular-products', async (req, res) => {
+    const rows = await mostPopularProducts();
+    res.render('views/most-popular-products.ejs', {
+        mostPopularProducts: rows
+    })
+});
+
+app.get('/views/drone-pilot-roster', async (req, res) => {
+    const rows = await dronePilotRoster();
+    res.render('views/drone-pilot-roster.ejs', {
+        dronePilotRoster: rows
+    })
+});
+
+app.get('/views/store-sales-overview', async (req, res) => {
+    const rows = await storeSalesOverview();
+    res.render('views/store-sales-overview.ejs', {
+        storeSalesOverview: rows
+    })
+});
+
+app.get('/views/orders-in-progress', async (req, res) => {
+    const rows = await ordersInProgress();
+    res.render('views/orders-in-progress.ejs', {
+        ordersInProgress: rows
     })
 });
 

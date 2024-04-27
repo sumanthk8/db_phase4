@@ -135,6 +135,11 @@ export async function storeSalesOverview() {
    return rows;
 }
 
+export async function ordersInProgress() {
+   const [rows] = await pool.query(`select * from orders_in_progress`);
+   return rows;
+}
+
 // Delete
 
 export async function removeCustomer(uname) {

@@ -8,12 +8,16 @@
 </head>
 <body>
     <table>
-        <th>Role Category</th>
-        <th>Count</th>
-        <% roleDistribution.forEach(role => {%>
+        <th>Username</th>
+        <th>Rating</th>
+        <th>Total Credit</th>
+        <th>Credit Allocated</th>
+        <% customerCreditCheck.forEach(customer => {%>
             <tr>
-                <td><%= role.category %></td>
-                <td><%= role.total %></td>
+                <td><%= customer.customer_name %></td>
+                <td><%= customer.rating %></td>
+                <td><%= customer.current_credit %></td>
+                <td><%= customer.credit_already_allocated %></td>
             </tr>
         <% }) %>
     </table>
