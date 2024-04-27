@@ -8,16 +8,16 @@
 </head>
 <body>
     <table>
-        <th>Username</th>
-        <th>Rating</th>
-        <th>Total Credit</th>
-        <th>Credit Allocated</th>
+        <th class="view-table">Username</th>
+        <th class="view-table">Rating</th>
+        <th class="view-table">Total Credit</th>
+        <th class="view-table">Credit Allocated</th>
         <% customerCreditCheck.forEach(customer => {%>
             <tr>
-                <td><%= customer.customer_name %></td>
-                <td><%= customer.rating %></td>
-                <td><%= customer.current_credit %></td>
-                <td><%= customer.credit_already_allocated %></td>
+                <td class="view-table"><%= customer.customer_name %></td>
+                <td class="view-table"><%= customer.rating %></td>
+                <td class="view-table"><%= customer.current_credit %></td>
+                <td class="view-table"><%= customer.credit_already_allocated %></td>
             </tr>
         <% }) %>
     </table>

@@ -8,18 +8,18 @@
 </head>
 <body>
     <table>
-        <th>Order ID</th>
-        <th>Order Cost</th>
-        <th>Product Count</th>
-        <th>Payload</th>
-        <th>Contents</th>
+        <th class="view-table">Order ID</th>
+        <th class="view-table">Order Cost</th>
+        <th class="view-table">Product Count</th>
+        <th class="view-table">Payload</th>
+        <th class="view-table">Contents</th>
         <% ordersInProgress.forEach(order => {%>
             <tr>
-                <td><%= order.orderID %></td>
-                <td><%= order.cost %></td>
-                <td><%= order.num_products %></td>
-                <td><%= order.payload %></td>
-                <td><%= order.contents %></td>
+                <td class="view-table"><%= order.orderID %></td>
+                <td class="view-table"><%= order.cost %></td>
+                <td class="view-table"><%= order.num_products %></td>
+                <td class="view-table"><%= order.payload %></td>
+                <td class="view-table"><%= order.contents %></td>
             </tr>
         <% }) %>
     </table>

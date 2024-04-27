@@ -1,4 +1,8 @@
-.long.button {
+.submit  {
+    all: unset;
+}
+
+.long.button  {
     width: 640px;
 }
 
@@ -16,17 +20,23 @@
     color: white;
     text-decoration: none;
 }
+
 .row {
     display: flex;
+}
+
+.view-table {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+input {
+    min-width: 200px;
 }
 
 table {
     width: 640px;
     margin: 20px;
     border-collapse: collapse;
-}
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
 }

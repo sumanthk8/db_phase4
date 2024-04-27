@@ -8,12 +8,12 @@
 </head>
 <body>
     <table>
-        <th>Role Category</th>
-        <th>Count</th>
+        <th class="view-table">Role Category</th>
+        <th class="view-table">Count</th>
         <% roleDistribution.forEach(role => {%>
             <tr>
-                <td><%= role.category %></td>
-                <td><%= role.total %></td>
+                <td class="view-table"><%= role.category %></td>
+                <td class="view-table"><%= role.total %></td>
             </tr>
         <% }) %>
     </table>

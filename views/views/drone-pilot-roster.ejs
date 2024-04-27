@@ -8,20 +8,20 @@
 </head>
 <body>
     <table>
-        <th>Pilot Username</th>
-        <th>License ID</th>
-        <th>Drone Store</th>
-        <th>Drone Tag</th>
-        <th>Successful Deliveries</th>
-        <th>Pending Deliveries</th>
+        <th class="view-table">Pilot Username</th>
+        <th class="view-table">License ID</th>
+        <th class="view-table">Drone Store</th>
+        <th class="view-table">Drone Tag</th>
+        <th class="view-table">Successful Deliveries</th>
+        <th class="view-table">Pending Deliveries</th>
         <% dronePilotRoster.forEach(pilot => {%>
             <tr>
-                <td><%= pilot.pilot %></td>
-                <td><%= pilot.licenseID %></td>
-                <td><%= pilot.drone_serves_store %></td>
-                <td><%= pilot.drone_tag %></td>
-                <td><%= pilot.successful_deliveries %></td>
-                <td><%= pilot.pending_deliveries %></td>
+                <td class="view-table"><%= pilot.pilot %></td>
+                <td class="view-table"><%= pilot.licenseID %></td>
+                <td class="view-table"><%= pilot.drone_serves_store %></td>
+                <td class="view-table"><%= pilot.drone_tag %></td>
+                <td class="view-table"><%= pilot.successful_deliveries %></td>
+                <td class="view-table"><%= pilot.pending_deliveries %></td>
             </tr>
         <% }) %>
     </table>

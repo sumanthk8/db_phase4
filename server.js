@@ -1,5 +1,7 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import { 
+    addCustomer,
     customerCreditCheck, 
     dronePilotRoster, 
     droneTrafficControl, 
@@ -13,6 +15,9 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.json());
+
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
@@ -20,6 +25,24 @@ app.get('/', (req, res) => {
 
 app.get('/customers', (req, res) => {
     res.render('customers/customers.ejs')
+});
+
+app.get('/customers/add-customer', (req, res) => {
+    res.render('customers/add-customer.ejs')
+});
+
+app.post('/customers/add-customer', urlencodedParser, async (req, res) => {
+    const input = req.body;
+    await addCustomer(
+        input.uname,
+        input.firstName,
+        input.lastName,
+        input.address,
+        input.birthdate === '' ? null : input.birthdate,
+        parseInt(input.rating),
+        parseInt(input.credit)
+    )
+    res.render('index.ejs')
 });
 
 app.get('/products', (req, res) => {

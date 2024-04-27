@@ -8,24 +8,24 @@
 </head>
 <body>
     <table>
-        <th>Product Barcode</th>
-        <th>Product Name</th>
-        <th>Product Weight</th>
-        <th>Lowest Price</th>
-        <th>Highest Price</th>
-        <th>Lowest Quantity</th>
-        <th>Highest Quantity</th>
-        <th>Total Quantity</th>
+        <th class="view-table">Product Barcode</th>
+        <th class="view-table">Product Name</th>
+        <th class="view-table">Product Weight</th>
+        <th class="view-table">Lowest Price</th>
+        <th class="view-table">Highest Price</th>
+        <th class="view-table">Lowest Quantity</th>
+        <th class="view-table">Highest Quantity</th>
+        <th class="view-table">Total Quantity</th>
         <% mostPopularProducts.forEach(product => {%>
             <tr>
-                <td><%= product.barcode %></td>
-                <td><%= product.product_name %></td>
-                <td><%= product.weight %></td>
-                <td><%= product.lowest_price %></td>
-                <td><%= product.highest_price %></td>
-                <td><%= product.lowest_quantity %></td>
-                <td><%= product.highest_quantity %></td>
-                <td><%= product.total_quantity %></td>
+                <td class="view-table"><%= product.barcode %></td>
+                <td class="view-table"><%= product.product_name %></td>
+                <td class="view-table"><%= product.weight %></td>
+                <td class="view-table"><%= product.lowest_price %></td>
+                <td class="view-table"><%= product.highest_price %></td>
+                <td class="view-table"><%= product.lowest_quantity %></td>
+                <td class="view-table"><%= product.highest_quantity %></td>
+                <td class="view-table"><%= product.total_quantity %></td>
             </tr>
         <% }) %>
     </table>
