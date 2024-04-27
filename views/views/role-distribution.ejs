@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Role Category</th>
+        <th>Count</th>
+        <% roleDistribution.forEach(role => {%>
+            <tr>
+                <td><%= role.category %></td>
+                <td><%= role.total %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <div class="row">
+        <a href="/" class="long button">Home</a>
+    </div>
+</body>
+</html>
