@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Remove Product</title>
+</head>
+<body>
+    <h1>Remove Product</h1>
+    <form action="/products/remove-product" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="barcode">Barcode:</label></td>
+                <td class="form-input"><input type="text" id="barcode" name="barcode" maxlength="40" required></td>
+                
+                <td class="form-label"\>
+                <td class="form-input"\>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/products" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Begin Order</title>
+</head>
+<body>
+    <h1>Begin Order</h1>
+    <form action="/orders/begin-order" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="order-id">Order ID:</label></td>
+                <td class="form-input"><input type="text" id="order-id" name="orderID" maxlength="40" required></td>
+
+                <td class="form-label"><label for="sold-on">Sold On:</label></td>
+                <td class="form-input"><input type="date" id="sold-on" name="soldOn"></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="purchased-by">Purchased By:</label></td>
+                <td class="form-input"><input type="text" id="purchased-by" name="purchasedBy" maxlength="40" required></td>
+                
+                <td class="form-label"><label for="carrier-store">Carrier Store:</label></td>
+                <td class="form-input"><input type="text" id="carrier-store" name="carrierStore" maxlength="40" required></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="carrier-tag">Carrier Tag:</label></td>
+                <td class="form-input"><input type="number" id="carrier-tag" name="carrierTag" min="0" required></td>
+
+                <td class="form-label"><label for="barcode">Barcode:</label></td>
+                <td class="form-input"><input type="text" id="barcode" name="barcode" maxlength="40" required></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="price">Price:</label></td>
+                <td class="form-input"><input type="number" id="price" name="price" min="0" required></td>
+
+                <td class="form-label"><label for="quantity">Quantity:</label></td>
+                <td class="form-input"><input type="number" id="quantity" name="quantity" min="1" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/orders" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Add Customer</title>
+    <title>Add Drone Pilot</title>
 </head>
 <body>
-    <h1>Add Customer</h1>
-    <form action="/customers/add-customer" method="POST">
+    <h1>Add Drone Pilot</h1>
+    <form action="/drone-pilots/add-drone-pilot" method="POST">
         <table>
             <tr>
                 <td class="form-label"><label for="username">Username:</label></td>
@@ -28,17 +28,27 @@
                 <td class="form-label"><label for="birthdate">Birthdate:</label></td>
                 <td class="form-input"><input type="date" id="birthdate" name="birthdate"></td>
                 
-                <td class="form-label"><label for="rating">Rating:</label></td>
-                <td class="form-input"><input type="number" id="rating" name="rating" min="1" max="5" required></td>
+                <td class="form-label"><label for="tax-id">Tax ID:</label></td>
+                <td class="form-input"><input type="text" id="tax-id" name="taxID" maxlength="40" required></td>
             </tr>
             <tr>
-                <td class="form-label"><label for="credit">Credit:</label></td>
-                <td class="form-input"><input type="number" id="credit" name="credit" min="0" required></td>
+                <td class="form-label"><label for="service">Service Length:</label></td>
+                <td class="form-input"><input type="number" id="service" name="service" min="0" required></td>
+            
+                <td class="form-label"><label for="salary">Salary:</label></td>
+                <td class="form-input"><input type="number" id="salary" name="salary" min="0" required></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="license-id">License ID:</label></td>
+                <td class="form-input"><input type="text" id="license-id" name="licenseID" maxlength="40" required></td>
+            
+                <td class="form-label"><label for="experience">Pilot Experience:</label></td>
+                <td class="form-input"><input type="number" id="experience" name="experience" min="0" required></td>
             </tr>
         </table>
         <div class="row">
             <button class="submit button">Submit</button>
-            <a href="/customers" class="button">Back</a>
+            <a href="/drone-pilots" class="button">Back</a>
         </div>
     </form>
 </body>

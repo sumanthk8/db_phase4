@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Increase Customer Credits</title>
+</head>
+<body>
+    <h1>Increase Customer Credits</h1>
+    <form action="/customers/increase-customer-credits" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="username">Username:</label></td>
+                <td class="form-input"><input type="text" id="username" name="uname" maxlength="40" required></td>
+                
+                <td class="form-label"><label for="money">Money:</label></td>
+                <td class="form-input"><input type="number" id="money" name="money" min="0" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/customers" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

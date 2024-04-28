@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Add Order Line</title>
+</head>
+<body>
+    <h1>Add Order Line</h1>
+    <form action="/orders/add-order-line" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="order-id">Order ID:</label></td>
+                <td class="form-input"><input type="text" id="order-id" name="orderID" maxlength="40" required></td>
+
+                <td class="form-label"><label for="barcode">Barcode:</label></td>
+                <td class="form-input"><input type="text" id="barcode" name="barcode" maxlength="40" required></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="price">Price:</label></td>
+                <td class="form-input"><input type="number" id="price" name="price" min="0" required></td>
+
+                <td class="form-label"><label for="quantity">Quantity:</label></td>
+                <td class="form-input"><input type="number" id="quantity" name="quantity" min="1" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/orders" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

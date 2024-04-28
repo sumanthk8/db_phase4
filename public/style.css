@@ -32,14 +32,16 @@
 }
 
 .form-label {
-    min-width: 100px;
-    padding-left: 20px;
+    min-width: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     /* text-align: center; */
 }
 
 .form-input {
-    min-width: 220px;
-
+    min-width: 200px;
 }
 
 input {
@@ -50,4 +52,9 @@ table {
     width: 640px;
     margin: 20px;
     border-collapse: collapse;
+}
+
+h1 {
+    width: 640px;
+    text-align: center;
 }

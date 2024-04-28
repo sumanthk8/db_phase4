@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Repair Refuel Drone</title>
+</head>
+<body>
+    <h1>Repair and Refuel Drone</h1>
+    <form action="/drones/repair-refuel-drone" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="store-id">Store ID:</label></td>
+                <td class="form-input"><input type="text" id="store-id" name="storeID" maxlength="40" required></td>
+                
+                <td class="form-label"><label for="drone-tag">Drone Tag:</label></td>
+                <td class="form-input"><input type="number" id="drone-tag" name="droneTag" min="0" required></td>
+            </tr>
+            <tr>
+                <td class="form-label"><label for="refueled-trips">Refueled Trips:</label></td>
+                <td class="form-input"><input type="number" id="refueled-trips" name="refueledTrips" min="0" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/drones" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

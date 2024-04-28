@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Remove Drone</title>
+</head>
+<body>
+    <h1>Remove Drone</h1>
+    <form action="/drones/remove-drone" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="store-id">Store ID:</label></td>
+                <td class="form-input"><input type="text" id="store-id" name="storeID" maxlength="40" required></td>
+                
+                <td class="form-label"><label for="drone-tag">Drone Tag:</label></td>
+                <td class="form-input"><input type="number" id="drone-tag" name="droneTag" min="0" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/drones" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Swap Drone Control</title>
+</head>
+<body>
+    <h1>Swap Drone Control</h1>
+    <form action="/drone-pilots/swap-drone-control" method="POST">
+        <table>
+            <tr>
+                <td class="form-label"><label for="incoming-pilot">Incoming Pilot:</label></td>
+                <td class="form-input"><input type="text" id="incoming-pilot" name="incomingPilot" maxlength="40" required></td>
+                
+                <td class="form-label"><label for="outgoing-pilot">Outgoing Pilot:</label></td>
+                <td class="form-input"><input type="text" id="outgoing-pilot" name="outgoingPilot" maxlength="40" required></td>
+            </tr>
+        </table>
+        <div class="row">
+            <button class="submit button">Submit</button>
+            <a href="/drone-pilots" class="button">Back</a>
+        </div>
+    </form>
+</body>
+</html>
