@@ -8,22 +8,22 @@
 </head>
 <body>
     <table>
-        <th class="view-table">Drone Store</th>
-        <th class="view-table">Drone Tag</th>
-        <th class="view-table">Drone Pilot</th>
-        <th class="view-table">Weight Allowed</th>
-        <th class="view-table">Current Weight</th>
-        <th class="view-table">Deliveries Allowed</th>
-        <th class="view-table">Delivies in Progress</th>
+        <th class="view-item">Drone Store</th>
+        <th class="view-item">Drone Tag</th>
+        <th class="view-item">Drone Pilot</th>
+        <th class="view-item">Weight Allowed</th>
+        <th class="view-item">Current Weight</th>
+        <th class="view-item">Deliveries Allowed</th>
+        <th class="view-item">Delivies in Progress</th>
         <% droneTrafficControl.forEach(drone => {%>
             <tr>
-                <td class="view-table"><%= drone.drone_serves_store %></td>
-                <td class="view-table"><%= drone.drone_tag %></td>
-                <td class="view-table"><%= drone.pilot %></td>
-                <td class="view-table"><%= drone.total_weight_allowed %></td>
-                <td class="view-table"><%= drone.current_weight %></td>
-                <td class="view-table"><%= drone.deliveries_allowed %></td>
-                <td class="view-table"><%= drone.deliveries_in_progress %></td>
+                <td class="view-item"><%= drone.drone_serves_store %></td>
+                <td class="view-item"><%= drone.drone_tag %></td>
+                <td class="view-item"><%= drone.pilot %></td>
+                <td class="view-item"><%= drone.total_weight_allowed %></td>
+                <td class="view-item"><%= drone.current_weight %></td>
+                <td class="view-item"><%= drone.deliveries_allowed %></td>
+                <td class="view-item"><%= drone.deliveries_in_progress %></td>
             </tr>
         <% }) %>
     </table>

@@ -8,20 +8,20 @@
 </head>
 <body>
     <table>
-        <th class="view-table">Store ID</th>
-        <th class="view-table">Store Name</th>
-        <th class="view-table">Store Manager</th>
-        <th class="view-table">Store Revenue</th>
-        <th class="view-table">Incoming Revenue</th>
-        <th class="view-table">Incoming Orders</th>
+        <th class="view-item">Store ID</th>
+        <th class="view-item">Store Name</th>
+        <th class="view-item">Store Manager</th>
+        <th class="view-item">Store Revenue</th>
+        <th class="view-item">Incoming Revenue</th>
+        <th class="view-item">Incoming Orders</th>
         <% storeSalesOverview.forEach(store => {%>
             <tr>
-                <td class="view-table"><%= store.store_id %></td>
-                <td class="view-table"><%= store.sname %></td>
-                <td class="view-table"><%= store.manager %></td>
-                <td class="view-table"><%= store.revenue %></td>
-                <td class="view-table"><%= store.incoming_revenue %></td>
-                <td class="view-table"><%= store.incoming_orders %></td>
+                <td class="view-item"><%= store.store_id %></td>
+                <td class="view-item"><%= store.sname %></td>
+                <td class="view-item"><%= store.manager %></td>
+                <td class="view-item"><%= store.revenue %></td>
+                <td class="view-item"><%= store.incoming_revenue %></td>
+                <td class="view-item"><%= store.incoming_orders %></td>
             </tr>
         <% }) %>
     </table>

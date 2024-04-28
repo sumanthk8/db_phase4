@@ -25,14 +25,25 @@
     display: flex;
 }
 
-.view-table {
+.view-item {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
 }
 
+.form-label {
+    min-width: 100px;
+    padding-left: 20px;
+    /* text-align: center; */
+}
+
+.form-input {
+    min-width: 220px;
+
+}
+
 input {
-    min-width: 200px;
+    min-width: 150px;
 }
 
 table {

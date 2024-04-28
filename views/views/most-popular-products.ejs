@@ -8,24 +8,24 @@
 </head>
 <body>
     <table>
-        <th class="view-table">Product Barcode</th>
-        <th class="view-table">Product Name</th>
-        <th class="view-table">Product Weight</th>
-        <th class="view-table">Lowest Price</th>
-        <th class="view-table">Highest Price</th>
-        <th class="view-table">Lowest Quantity</th>
-        <th class="view-table">Highest Quantity</th>
-        <th class="view-table">Total Quantity</th>
+        <th class="view-item">Product Barcode</th>
+        <th class="view-item">Product Name</th>
+        <th class="view-item">Product Weight</th>
+        <th class="view-item">Lowest Price</th>
+        <th class="view-item">Highest Price</th>
+        <th class="view-item">Lowest Quantity</th>
+        <th class="view-item">Highest Quantity</th>
+        <th class="view-item">Total Quantity</th>
         <% mostPopularProducts.forEach(product => {%>
             <tr>
-                <td class="view-table"><%= product.barcode %></td>
-                <td class="view-table"><%= product.product_name %></td>
-                <td class="view-table"><%= product.weight %></td>
-                <td class="view-table"><%= product.lowest_price %></td>
-                <td class="view-table"><%= product.highest_price %></td>
-                <td class="view-table"><%= product.lowest_quantity %></td>
-                <td class="view-table"><%= product.highest_quantity %></td>
-                <td class="view-table"><%= product.total_quantity %></td>
+                <td class="view-item"><%= product.barcode %></td>
+                <td class="view-item"><%= product.product_name %></td>
+                <td class="view-item"><%= product.weight %></td>
+                <td class="view-item"><%= product.lowest_price %></td>
+                <td class="view-item"><%= product.highest_price %></td>
+                <td class="view-item"><%= product.lowest_quantity %></td>
+                <td class="view-item"><%= product.highest_quantity %></td>
+                <td class="view-item"><%= product.total_quantity %></td>
             </tr>
         <% }) %>
     </table>
