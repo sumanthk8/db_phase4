@@ -126,7 +126,7 @@ app.post('/drones/add-drone', urlencodedParser, async (req, res) => {
     const input = req.body;
     await addDrone(
         input.storeID,
-        input.droneTag,
+        parseInt(input.droneTag),
         parseInt(input.capacity),
         parseInt(input.remainingTrips),
         input.pilot
@@ -142,7 +142,7 @@ app.post('/drones/repair-refuel-drone', urlencodedParser, async (req, res) => {
     const input = req.body;
     await repairRefuelDrone(
         input.storeID,
-        input.droneTag,
+        parseInt(input.droneTag),
         parseInt(input.refueledTrips)
     )
     res.render('index.ejs')
@@ -156,7 +156,7 @@ app.post('/drones/remove-drone', urlencodedParser, async (req, res) => {
     const input = req.body;
     await removeDrone(
         input.storeID,
-        input.droneTag
+        parseInt(input.droneTag)
     )
     res.render('index.ejs')
 });
@@ -226,7 +226,7 @@ app.post('/orders/begin-order', urlencodedParser, async (req, res) => {
         input.soldOn,
         input.purchasedBy,
         input.carrierStore,
-        input.carrierTag,
+        parseInt(input.carrierTag),
         input.barcode,
         parseInt(input.price),
         parseInt(input.quantity)
