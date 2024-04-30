@@ -33,3 +33,5 @@ Lastly, run the project with:
 ```bash
 npm run start
 ```
+## Technologies Used
+The app uses ejs on the frontend and express on the backend. We used the mysql2 library to interface with the database. 
