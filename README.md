@@ -34,4 +34,7 @@ Lastly, run the project with:
 npm run start
 ```
 ## Technologies Used
-The app uses ejs on the frontend and express on the backend. We used the mysql2 library to interface with the database. 
+The app uses EJS on the frontend and Express on the backend. We used the MySQL2 library to interface with the database through Node. 
+
+## Work Distribution
+Kabir Doshi and I split the work equally amongst the different procedures. Kabir handled Views, Products and Drones, and I handled Customers, Drone Pilots and Orders. I did the foundational setup for the application.
